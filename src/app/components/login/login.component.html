@@ -1,0 +1,13 @@
+<div class="login-container">
+  <div class="login-form">
+    <h1>📚 Biblioteca</h1>
+    <form (ngSubmit)="onLogin()">
+      <input type="text" [(ngModel)]="username" name="username" placeholder="Usuario">
+      <input type="password" [(ngModel)]="password" name="password" placeholder="Contraseña">
+      <button type="submit">Iniciar Sesión</button>
+    </form>
+    @if (error()) {
+      <div class="error">{{ error() }}</div>
+    }
+  </div>
+</div>
